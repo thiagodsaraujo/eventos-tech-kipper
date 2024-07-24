@@ -23,6 +23,8 @@ public class Coupon {
     @GeneratedValue
     private UUID id;
 
+    private String code;
+
     private Date valid;
 
     private Integer discount;
@@ -31,4 +33,6 @@ public class Coupon {
     @JoinColumn(name = "event_id") // Chave estrangeira, na tabela coupon, que referencia a tabela event vai ter o nome event_id
     // e na tabela event, a chave primária que é referenciada é id
     private Event event;
+
+
 }
